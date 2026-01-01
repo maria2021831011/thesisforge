@@ -1,0 +1,22 @@
+# Core data handling
+numpy>=1.24
+pandas>=2.0
+
+# Statistics
+scipy>=1.10
+statsmodels>=0.14
+
+# Visualization
+matplotlib>=3.8
+seaborn>=0.13
+
+# PDF & research utilities
+PyPDF2>=3.0
+pdfplumber>=0.10
+
+# Reference management
+bibtexparser>=1.4
+pybtex>=0.24
+
+# HTTP / DOI support
+requests>=2.31

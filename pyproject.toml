@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+# tells pytest where the tests are located
+testpaths = [
+    "tests"
+]
+
+[tool.mypy]
+# tells mypy to look inside src folder
+mypy_path = "src"
+# ignore missing imports (e.g., external packages without type hints)
+ignore_missing_imports = true
