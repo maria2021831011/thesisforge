@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: thesisforge
+Version: 0.1.0
+Summary: A Python toolkit for thesis and academic research
+Home-page: https://github.com/maria2021831011/thesisforge
+Author: maria2021831011
+Author-email: ritukhan534@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/maria2021831011/thesisforge/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.24
+Requires-Dist: pandas>=2.0
+Requires-Dist: scipy>=1.10
+Requires-Dist: statsmodels>=0.14
+Requires-Dist: matplotlib>=3.8
+Requires-Dist: seaborn>=0.13
+Requires-Dist: PyPDF2>=3.0
+Requires-Dist: pdfplumber>=0.10
+Requires-Dist: bibtexparser>=1.4
+Requires-Dist: pybtex>=0.24
+Requires-Dist: requests>=2.31
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4; extra == "dev"
+Requires-Dist: pytest-cov>=7.0; extra == "dev"
+Requires-Dist: black>=23.9; extra == "dev"
+Requires-Dist: flake8>=7.3; extra == "dev"
+Requires-Dist: isort>=7.0; extra == "dev"
+Requires-Dist: mypy>=1.19; extra == "dev"
+Requires-Dist: tox>=4.32; extra == "dev"
+Requires-Dist: sphinx>=8.2; extra == "dev"
+Requires-Dist: sphinx-rtd-theme>=3.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-python
+Dynamic: summary
+
+# thesisforge

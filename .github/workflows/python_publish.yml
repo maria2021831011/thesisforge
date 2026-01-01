@@ -2,26 +2,32 @@ name: Publish ThesisForge to PyPI
 
 on:
   release:
-    types: [published]  # Only trigger on release
+    types: [published]  # trigger only on release
 
 permissions:
   contents: read
 
 jobs:
   deploy:
-    runs-on: windows-latest  # Windows environment
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.10
+          python-version: 3.11  # match your local version
 
       - name: Install build tools
         run: |
           python -m pip install --upgrade pip
           pip install build twine setuptools wheel
+
+      - name: Lint and type-check (optional)
+        run: |
+          pip install flake8 mypy
+          flake8 src --count --select=E9,F63,F7,F82 --show-source --statistics
+          mypy src
 
       - name: Build the package
         run: python -m build
