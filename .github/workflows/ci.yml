@@ -25,9 +25,18 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install dependencies
+      - name: Install system dependencies (Ubuntu only)
+        if: runner.os == 'Linux'
         run: |
-          python -m pip install --upgrade pip
+          sudo apt-get update
+          sudo apt-get install -y libffi-dev libcairo2 poppler-utils
+
+      - name: Upgrade pip and build tools
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+
+      - name: Install Python dependencies
+        run: |
           pip install -r requirements.txt
           pip install -r requirements_dev.txt
           pip install tox tox-gh-actions flake8 mypy
